@@ -3,7 +3,7 @@ set -x
 MODEL_PATH=yh0903/financial-reasoning-model-sft  # replace it with your local file path
 
 python3 -m verl.trainer.main \
-    config=examples/config.yaml \
+    config=.run_grpo_fin_sentiment/config.yaml \
     data.train_files=./data/financial_reasoning_sentiment_dataset_grpo_train.jsonl \
     data.val_files=./data/financial_reasoning_sentiment_dataset_grpo_val.jsonl \
     worker.actor.model.model_path=${MODEL_PATH} \
